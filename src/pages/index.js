@@ -6,10 +6,10 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Home</h1>
+    <h1>{data.site.siteMetadata.title}</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
@@ -19,4 +19,13 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export const query = graphql`
+  query{
+    site{
+      siteMetadata{
+        title
+      }
+    }
+  }
+`
+export default IndexPage 
