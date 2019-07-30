@@ -12,14 +12,12 @@ const tabs = [
 ];
 
 const createTabs = () => {
-  let ret = [];
-  tabs.forEach(element => {
-    ret.push(
+  return tabs.map( element => 
       <h3 style={{ margin: 0 }}>
         <Link
           to={element.to}
           style={{
-            color: `white`,
+            color: `grey`,
             textDecoration: `none`,
             padding: `0px 7px`,
           }}
@@ -28,14 +26,11 @@ const createTabs = () => {
         </Link>
       </h3>
     );
-  });
-  return ret
 }
 
 const Header = ({ siteTitle, tabs }) => (
   <header
     style={{
-      background: `grey`,
       marginBottom: `1.45rem`,
       display: `flex`,
       justifyContent: `space-between`,
@@ -52,7 +47,7 @@ const Header = ({ siteTitle, tabs }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `grey`,
             textDecoration: `none`,
           }}
         >

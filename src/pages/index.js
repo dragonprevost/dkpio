@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <h1>{data.site.siteMetadata.title}</h1>
+    <h1>{data.github.viewer.repositories.nodes[0].url}</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
@@ -21,10 +21,17 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query{
-    site{
-      siteMetadata{
-        title
-      }
+    github {
+      viewer {
+        name
+        repositories(last: 5) {
+          nodes {
+            name
+            description
+            url
+          }
+        }
+      } 
     }
   }
 `
