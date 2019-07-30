@@ -1,15 +1,20 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
+import HomeIcon from "@material-ui/icons/home"
+import PersonIcon from "@material-ui/icons/person"
+import CollectionsIcon from "@material-ui/icons/collections"
+import AssignmentIcon from "@material-ui/icons/assignment"
 import Tabs from "./tabs"
 
 const tabs = [
-  {to: '/', text: 'Home'},
-  {to: '/portfolio', text: 'Portfolio'},
-  {to: '/resume', text: 'Resume'},
-  {to: '/contact', text: 'Contact'},
+  { to: '/', text: 'Home', icon: <HomeIcon /> },
+  { to: '/portfolio', text: 'Portfolio', icon: <CollectionsIcon /> },
+  { to: '/resume', text: 'Resume', icon: <AssignmentIcon />},
+  { to: '/contact', text: 'Contact', icon: <PersonIcon />},
 ];
+
+const mobile = window.innerWidth < 600;
 
 const createTabs = () => {
   return tabs.map( element => 
@@ -23,13 +28,14 @@ const createTabs = () => {
             padding: `0px 7px`,
           }}
         >
-          {element.text}  
+          { element.icon }
+          { !mobile && <span style={{ verticalAlign: `top` }}>{ element.text }</span> } 
         </Link>
       </h3>
     );
 }
 
-const Header = ({ siteTitle }) => (
+const Nav = ({ siteTitle }) => (
   <header
     style={{
       marginBottom: `1.45rem`,
@@ -65,12 +71,12 @@ const Header = ({ siteTitle }) => (
   </header>
 )
 
-Header.propTypes = {
+Nav.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Nav.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Nav
