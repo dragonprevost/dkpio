@@ -18,6 +18,7 @@ const createTabs = () => {
           to={element.to}
           style={{
             color: `grey`,
+            fontFamily: `Raleway`,
             textDecoration: `none`,
             padding: `0px 7px`,
           }}
@@ -28,7 +29,7 @@ const createTabs = () => {
     );
 }
 
-const Header = ({ siteTitle, tabs }) => (
+const Header = ({ siteTitle }) => (
   <header
     style={{
       marginBottom: `1.45rem`,
@@ -48,6 +49,7 @@ const Header = ({ siteTitle, tabs }) => (
           to="/"
           style={{
             color: `grey`,
+            fontFamily: `Raleway`,
             textDecoration: `none`,
           }}
         >
