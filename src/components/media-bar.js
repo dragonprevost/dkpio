@@ -4,6 +4,7 @@ import React from "react"
 const imgStyle = {
   width: `10%`,
   minWidth: `25px`,
+  maxWidth: `100px`,
   marginLeft: `7.5%`,
   marginRight: `7.5%`,
 };

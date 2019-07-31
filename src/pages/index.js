@@ -7,7 +7,11 @@ import SEO from "../components/seo"
 
 const bodyStyle = {
   textAlign: `center`,
-  top: `50%`,
+  minHeight: `80vh`,
+  display: `flex`,
+  flexDirection: `column`,
+  alignItems: `center`,
+  justifyContent: `center`,
 };
 
 const imgStyle = {
@@ -20,9 +24,8 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div style={ bodyStyle }>
-      <h1>{`Dragon Prevost`}</h1>
-      <p>{ `Computer Science - Embedded Development - Web Development` }</p>
       <img src={"https://avatars2.githubusercontent.com/u/22180881?s=460&v=4"} alt="display" style={ imgStyle } />
+      <p>Computer Science &#8226; Web Development &#8226; Systems Engineering</p>
       <MediaBar />
     </div> 
   </Layout>

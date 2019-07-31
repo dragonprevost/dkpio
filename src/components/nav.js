@@ -51,7 +51,6 @@ class Nav extends Component{
     return (
       <header
         style={{
-          marginBottom: `1.45rem`,
           display: `flex`,
           justifyContent: `space-between`,
           alignItems: `center`,
