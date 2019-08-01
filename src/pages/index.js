@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <div style={ bodyStyle }>
       <img src={"https://avatars2.githubusercontent.com/u/22180881?s=460&v=4"} alt="display" style={ imgStyle } />
-      <p>Computer Science &#8226; Web Development &#8226; Systems Engineering</p>
+      <p>Computer Science &#8226; Web Development &#8226; Embedded Systems</p>
       <MediaBar />
     </div> 
   </Layout>

@@ -4,7 +4,7 @@ const Entry = ( props ) => {
   return(
     <div>
       {/* Header */}
-      <h3>{ props.header }</h3>
+      <h4>{ props.header }</h4>
       {/* Duration */}
       <h6>{ props.duration }</h6>
       {/* Text */}
