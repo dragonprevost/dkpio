@@ -28,6 +28,13 @@ const experience = [
   },
 ];
 
+const summary = {
+  body: `Third year Computer Science student looking 
+    for a co-op that will enable my ambition to learn 
+    new skills and development a professional work flow.`,
+  bullets: [ `Excels in Object Oriented Programming`, `Web Developement`, `Embedded Programming`],
+}
+  
 const projects = [
 
 ];
@@ -39,15 +46,25 @@ const skills = [
 const IndexPage = () => (
   <Layout>
     <SEO title="Resume" />
-    <h1>Resume</h1>
-    
+    { /* Summary */ }
+    <h2>Summary</h2>
+    <hr/>
+    <p>{ summary.body }</p>
+    <ul>
+    { summary.bullets.map( (element, i) => <li key={ i }>{ element }</li> )}
+    </ul>
+    { /* Experiences */ }
+    <h2>Experience</h2>
     { experience.map( (element, i) => {
       return(
-        <Entry
-          header={ element.header }
-          duration={ element.duration }
-          body={ element.body }
-          bullets={ element.bullets } />
+        <div>
+          <hr/>
+          <Entry
+            header={ element.header }
+            duration={ element.duration }
+            body={ element.body }
+            bullets={ element.bullets } />
+        </div>
       ) 
     }) }
   
