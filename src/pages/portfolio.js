@@ -41,8 +41,12 @@ class IndexPage extends Component{
   constructor(props){
     super(props);
     this.state = {
-      mobile: window.innerWidth < 805, 
+      mobile: true, 
     }
+  }
+  
+  componentDidMount(){
+    this.setState({ mobile: window.innerWidth < 805 }) 
   }
 
   render(){
