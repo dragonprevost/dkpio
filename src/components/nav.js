@@ -2,16 +2,16 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { Component } from "react"
 import HomeIcon from "@material-ui/icons/home"
-import PersonIcon from "@material-ui/icons/person"
-import CollectionsIcon from "@material-ui/icons/collections"
+//import PersonIcon from "@material-ui/icons/person"
+//import CollectionsIcon from "@material-ui/icons/collections"
 import AssignmentIcon from "@material-ui/icons/assignment"
 import Tabs from "./tabs"
 
 const tabs = [
   { to: '/', text: 'Home', icon: <HomeIcon /> },
-  { to: '/portfolio', text: 'Portfolio', icon: <CollectionsIcon /> },
+  //{ to: '/portfolio', text: 'Portfolio', icon: <CollectionsIcon /> },
   { to: '/resume', text: 'Resume', icon: <AssignmentIcon />},
-  { to: '/contact', text: 'Contact', icon: <PersonIcon />},
+  //{ to: '/contact', text: 'Contact', icon: <PersonIcon />},
 ];
 
 class Nav extends Component{
@@ -20,7 +20,7 @@ class Nav extends Component{
     this.state = {
       mobile: false,
     };
-  } 
+  }
 
   componentDidMount(){
     console.log(window.innerWidth);
@@ -28,7 +28,7 @@ class Nav extends Component{
   }
 
   createTabs = () => {
-    return tabs.map( (element, i) => 
+    return tabs.map( (element, i) =>
         <h3 key={ i } style={{ margin: 0 }}>
           <Link
             to={element.to}
@@ -40,7 +40,7 @@ class Nav extends Component{
             }}
           >
             { element.icon }
-            { !this.state.mobile && <span style={{ verticalAlign: `top` }}>{ element.text }</span> } 
+            { !this.state.mobile && <span style={{ verticalAlign: `top` }}>{ element.text }</span> }
           </Link>
         </h3>
       );

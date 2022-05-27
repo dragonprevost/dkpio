@@ -1,5 +1,7 @@
 import React from "react"
-
+import github from "../images/github.png"
+import linkedin from "../images/linkedin.png"
+import email from "../images/email.png"
 
 const imgStyle = {
   width: `10%`,
@@ -10,10 +12,21 @@ const imgStyle = {
 };
 
 const media = [
-  {icon: "https://image.flaticon.com/icons/svg/25/25231.svg", name: `GitHub`, to: "https://github.com/dragonprevost"},
-  {icon: "https://image.flaticon.com/icons/svg/25/25320.svg", name: `LinkedIn`, to: "https://www.linkedin.com/in/dragonprevost/" },
-  {icon: "https://image.flaticon.com/icons/svg/25/25660.svg", name: `Twitter`, to: "https://twitter.com/DragonPrevost" },
-  {icon: "https://image.flaticon.com/icons/svg/25/25236.svg", name: `Mail`, to: "mailto:dragon@dkp.io" },
+  {
+    icon: github,
+    name: `GitHub`,
+    to: "https://github.com/dragonprevost"
+  },
+  {
+    icon: linkedin,
+    name: `LinkedIn`,
+    to: "https://www.linkedin.com/in/dragonprevost/"
+  },
+  {
+    icon: email,
+    name: `Mail`,
+    to: "mailto:dragon@dkp.io"
+  },
 ];
 
 const MediaBar = () => {

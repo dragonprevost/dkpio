@@ -2,7 +2,6 @@ import React from "react"
 
 import MediaBar from "../components/media-bar"
 import Layout from "../components/layout"
-//import Image from "../components/image"
 import SEO from "../components/seo"
 
 const bodyStyle = {
@@ -24,10 +23,13 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div style={ bodyStyle }>
-      <img src={"https://avatars2.githubusercontent.com/u/22180881?s=460&v=4"} alt="display" style={ imgStyle } />
+      <img
+        src={"https://avatars2.githubusercontent.com/u/22180881?s=460&v=4"}
+        alt="display" style={ imgStyle }
+      />
       <p>Computer Science &#8226; Web Development &#8226; Embedded Systems</p>
       <MediaBar />
-    </div> 
+    </div>
   </Layout>
 )
 
@@ -44,9 +46,9 @@ export const query = graphql`
             url
           }
         }
-      } 
+      }
     }
   }
 `
 */
-export default IndexPage 
+export default IndexPage
